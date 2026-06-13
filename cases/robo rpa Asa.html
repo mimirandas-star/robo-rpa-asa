@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>MJTB Labs — Robô Juntada e-CAC</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Inter:wght@300;400;500&display=swap');
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#F5F0E8;font-family:'Inter',sans-serif;}
+.brand{font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;}
+.slide{width:100%;aspect-ratio:16/9;overflow:hidden;border:0.5px solid #C8BAA0;margin-bottom:8px;}
+.lbl{font-size:11px;letter-spacing:2px;text-transform:uppercase;font-family:'Inter',sans-serif;}
+.wrapper{display:none;}.wrapper.active{display:block;}
+.nav{display:flex;gap:8px;justify-content:center;margin-bottom:16px;}
+.dot{width:10px;height:10px;border-radius:50%;background:#C8BAA0;border:none;cursor:pointer;padding:0;}
+.dot.on{background:#1C1712;}
+.slide-num{font-size:12px;color:#7A6A4F;letter-spacing:2px;margin-bottom:8px;font-weight:500;}
+.btns{display:flex;justify-content:center;gap:12px;margin-top:8px;}
+.btn{font-family:'Inter',sans-serif;font-size:12px;letter-spacing:2px;color:#7A6A4F;background:none;border:0.5px solid #C8BAA0;padding:10px 24px;cursor:pointer;}
+table{width:100%;border-collapse:collapse;}
+th{background:#1C1712;color:#E8DFC8;font-size:11px;letter-spacing:1px;padding:8px 10px;font-weight:400;text-align:left;}
+td{font-size:12px;color:#1C1712;padding:8px 10px;border-bottom:0.5px solid #E8DFC8;}
+tr:nth-child(even) td{background:#F5F0E8;}
+</style>
+</head>
+<body style="padding:24px 16px;">
+
+<div class="nav" id="nav"></div>
+
+<!-- S1 CAPA -->
+<div class="wrapper active">
+<p class="slide-num">SLIDE 1 — CAPA</p>
+<div class="slide" style="background:#1C1712;display:flex;align-items:center;padding:0 8% 0 10%;gap:32px;">
+  <div style="flex:1;">
+    <div class="lbl" style="color:#7A6A4F;margin-bottom:24px;font-size:12px;">PROPOSTA COMERCIAL · JUNHO 2026</div>
+    <div class="brand" style="font-size:clamp(32px,5vw,60px);color:#E8DFC8;line-height:1.1;">MJTB<br>Labs</div>
+    <div style="width:48px;height:0.5px;background:#A0916F;margin:20px 0;"></div>
+    <div style="font-size:clamp(13px,1.6vw,18px);color:#A0916F;line-height:2.2;">
+      Desenvolvimento de Robô RPA<br>
+      Juntada de Documentos no e-CAC<br>
+      Para: ASA Comex
+    </div>
+  </div>
+  <div style="display:flex;flex-direction:column;align-items:flex-end;gap:12px;">
+    <div style="width:1px;height:90px;background:#2E2720;"></div>
+    <div class="brand" style="font-size:14px;color:#E8DFC8;letter-spacing:4px;text-align:right;">do dado</div>
+    <div class="brand" style="font-size:14px;color:#A0916F;letter-spacing:4px;text-align:right;">à decisão.</div>
+  </div>
+</div>
+</div>
+
+<!-- S2 SOBRE -->
+<div class="wrapper">
+<p class="slide-num">SLIDE 2 — SOBRE A MJTB LABS</p>
+<div class="slide" style="background:#F5F0E8;display:flex;">
+  <div style="width:36%;background:#1C1712;display:flex;flex-direction:column;justify-content:flex-end;padding:7% 6%;">
+    <div class="brand" style="font-size:clamp(24px,3.5vw,42px);color:#E8DFC8;letter-spacing:6px;">MJTB</div>
+    <div style="font-size:10px;color:#7A6A4F;letter-spacing:5px;margin-top:4px;">LABS</div>
+    <div style="width:32px;height:0.5px;background:#A0916F;margin:16px 0;"></div>
+    <div style="font-size:11px;color:#5A4E3A;letter-spacing:1px;line-height:1.8;">arquitetura de<br>inteligência organizacional</div>
+  </div>
+  <div style="flex:1;padding:7% 7%;display:flex;flex-direction:column;justify-content:center;gap:14px;">
+    <div class="lbl" style="color:#A0916F;">QUEM SOMOS</div>
+    <div class="brand" style="font-size:clamp(16px,2.2vw,26px);color:#1C1712;line-height:1.3;">Mais do que implementar tecnologia —<br>construímos arquitetura de inteligência organizacional.</div>
+    <div style="width:32px;height:0.5px;background:#A0916F;"></div>
+    <div style="font-size:12px;color:#7A6A4F;line-height:1.9;">
+      Visão executiva · Profundidade analítica · Design sistêmico<br><br>
+      Transformamos complexidade em clareza,<br>
+      informação em decisão e potencial tecnológico<br>
+      em vantagem competitiva real.
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- S3 PROBLEMA -->
+<div class="wrapper">
+<p class="slide-num">SLIDE 3 — O PROBLEMA HOJE</p>
+<div class="slide" style="background:#E8DFC8;display:flex;flex-direction:column;padding:6% 8%;">
+  <div class="lbl" style="color:#A0916F;margin-bottom:16px;">O CENÁRIO ATUAL — ASA COMEX</div>
+  <div class="brand" style="font-size:clamp(16px,2.5vw,28px);color:#1C1712;line-height:1.2;margin-bottom:24px;">Juntadas manuais de alto volume com risco operacional,<br>fadiga e perda de escala.</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;flex:1;">
+    <div style="background:#1C1712;padding:16px 14px;display:flex;flex-direction:column;justify-content:flex-end;gap:8px;">
+      <div class="brand" style="font-size:clamp(26px,3.5vw,44px);color:#A0916F;">15min</div>
+      <div style="font-size:11px;color:#7A6A4F;letter-spacing:1px;">por processo manual</div>
+      <div style="font-size:12px;color:#E8DFC8;line-height:1.6;">Login + anexação sequencial + controle de protocolo</div>
+    </div>
+    <div style="background:#7A6A4F;padding:16px 14px;display:flex;flex-direction:column;justify-content:flex-end;gap:8px;">
+      <div class="brand" style="font-size:clamp(26px,3.5vw,44px);color:#E8DFC8;">2.700</div>
+      <div style="font-size:11px;color:#C8BAA0;letter-spacing:1px;">processos por contrato</div>
+      <div style="font-size:12px;color:#F5F0E8;line-height:1.6;">Picos semestrais com 5–30+ pessoas envolvidas</div>
+    </div>
+    <div style="background:#A0916F;padding:16px 14px;display:flex;flex-direction:column;justify-content:flex-end;gap:8px;">
+      <div class="brand" style="font-size:clamp(26px,3.5vw,44px);color:#1C1712;">Alto</div>
+      <div style="font-size:11px;color:#E8DFC8;letter-spacing:1px;">risco operacional</div>
+      <div style="font-size:12px;color:#1C1712;line-height:1.6;">Erros por fadiga, horas extras e risco de prazo regulatório</div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- S4 SOLUÇÃO -->
+<div class="wrapper">
+<p class="slide-num">SLIDE 4 — A SOLUÇÃO</p>
+<div class="slide" style="background:#F5F0E8;display:flex;flex-direction:column;padding:5% 7%;">
+  <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:18px;">
+    <div class="lbl" style="color:#A0916F;">ROBÔ RPA — MODELO HÍBRIDO</div>
+    <div style="font-size:10px;color:#C8BAA0;letter-spacing:1px;">MJTB LABS · ASA COMEX · 2026</div>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;flex:1;">
+    <div style="border:0.5px solid #C8BAA0;padding:16px;display:flex;flex-direction:column;gap:8px;">
+      <div style="width:20px;height:0.5px;background:#A0916F;"></div>
+      <div class="lbl" style="color:#A0916F;font-size:10px;">HUMANO — PREPARAÇÃO</div>
+      <div class="brand" style="font-size:20px;color:#1C1712;">Equipe ASA</div>
+      <div style="font-size:12px;color:#7A6A4F;line-height:1.7;">Valida, renomeia, assina e disponibiliza os arquivos no SharePoint conforme critérios da Receita Federal.</div>
+    </div>
+    <div style="background:#1C1712;padding:16px;display:flex;flex-direction:column;gap:8px;">
+      <div style="width:20px;height:0.5px;background:#A0916F;"></div>
+      <div class="lbl" style="color:#7A6A4F;font-size:10px;">ROBÔ — CORE DA JUNTADA</div>
+      <div class="brand" style="font-size:20px;color:#E8DFC8;">Automação MJTB</div>
+      <div style="font-size:12px;color:#A0916F;line-height:1.7;">Login e-CAC · Loop por processo · Divisão em lotes · Juntada · Download protocolo · Atualização planilha · Notificação</div>
+    </div>
+    <div style="border:0.5px solid #C8BAA0;padding:16px;display:flex;flex-direction:column;gap:8px;">
+      <div style="width:20px;height:0.5px;background:#A0916F;"></div>
+      <div class="lbl" style="color:#A0916F;font-size:10px;">RESULTADO ESPERADO</div>
+      <div class="brand" style="font-size:20px;color:#1C1712;">De 15min para &lt;2min</div>
+      <div style="font-size:12px;color:#7A6A4F;line-height:1.7;">Taxa de sucesso &gt;95% · Equipe liberada · Zero horas extras · Conformidade garantida.</div>
+    </div>
+    <div style="border:0.5px solid #C8BAA0;padding:16px;display:flex;flex-direction:column;gap:8px;">
+      <div style="width:20px;height:0.5px;background:#A0916F;"></div>
+      <div class="lbl" style="color:#A0916F;font-size:10px;">MONITORAMENTO</div>
+      <div class="brand" style="font-size:20px;color:#1C1712;">24x7 + Dashboard</div>
+      <div style="font-size:12px;color:#7A6A4F;line-height:1.7;">Alertas automáticos · Dashboard web incluso · Logs JSON · Notificação Teams/e-mail.</div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- S5 TIME -->
+<div class="wrapper">
+<p class="slide-num">SLIDE 5 — TIME DE DESENVOLVIMENTO</p>
+<div class="slide" style="background:#1C1712;display:flex;flex-direction:column;padding:6% 8%;">
+  <div class="lbl" style="color:#7A6A4F;margin-bottom:24px;">TIME DEDICADO AO PROJETO</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;flex:1;">
+    <div style="display:flex;flex-direction:column;gap:14px;">
+      <div style="border-top:0.5px solid #2E2720;padding-top:14px;">
+        <div class="lbl" style="color:#A0916F;font-size:10px;margin-bottom:6px;">GESTÃO E SOLUÇÕES</div>
+        <div class="brand" style="font-size:20px;color:#E8DFC8;">Michele Miranda</div>
+        <div style="font-size:12px;color:#7A6A4F;margin-top:6px;line-height:1.7;">Fouder MJTB Labs · Gestão do projeto, arquitetura de dados, interface com o cliente e responsabilidade contratual.</div>
+      </div>
+      <div style="border-top:0.5px solid #2E2720;padding-top:14px;">
+        <div class="lbl" style="color:#A0916F;font-size:10px;margin-bottom:6px;">LIDERANÇA TÉCNICA</div>
+        <div class="brand" style="font-size:20px;color:#E8DFC8;">Eduardo Aló</div>
+        <div style="font-size:12px;color:#7A6A4F;margin-top:6px;line-height:1.7;">Decisões críticas de arquitetura, desenvolvimento do core RPA e revisão técnica de todas as entregas.</div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px;">
+      <div style="border-top:0.5px solid #2E2720;padding-top:14px;">
+        <div class="lbl" style="color:#A0916F;font-size:10px;margin-bottom:6px;">FULLSTACK PLENO</div>
+        <div class="brand" style="font-size:20px;color:#E8DFC8;">Desenvolvimento Core</div>
+        <div style="font-size:12px;color:#7A6A4F;margin-top:6px;line-height:1.7;">Desenvolvimento do robô, integrações SharePoint/e-CAC e automação dos fluxos de juntada.</div>
+      </div>
+      <div style="border-top:0.5px solid #2E2720;padding-top:14px;">
+        <div class="lbl" style="color:#A0916F;font-size:10px;margin-bottom:6px;">FULLSTACK JUNIOR (+1 SE NECESSÁRIO)</div>
+        <div class="brand" style="font-size:20px;color:#E8DFC8;">Suporte & Testes</div>
+        <div style="font-size:12px;color:#7A6A4F;margin-top:6px;line-height:1.7;">Suporte ao desenvolvimento, testes de robustez e validação. Possibilidade de reforço conforme demanda.</div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- S6 INVESTIMENTO -->
+<div class="wrapper">
+<p class="slide-num">SLIDE 6 — INVESTIMENTO</p>
+<div class="slide" style="background:#F5F0E8;display:flex;flex-direction:column;padding:5% 7%;">
+  <div class="lbl" style="color:#A0916F;margin-bottom:18px;">INVESTIMENTO — DESENVOLVIMENTO</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;flex:1;">
+    <div style="background:#1C1712;padding:22px;display:flex;flex-direction:column;justify-content:space-between;">
+      <div>
+        <div class="lbl" style="color:#7A6A4F;margin-bottom:12px;">PROJETO FECHADO · 3 MESES</div>
+        <div class="brand" style="font-size:clamp(28px,4.5vw,48px);color:#E8DFC8;">R$ 54.000</div>
+        <div style="width:36px;height:0.5px;background:#A0916F;margin:14px 0;"></div>
+        <div style="font-size:12px;color:#A0916F;line-height:2;">
+          Desenvolvimento completo do robô RPA<br>
+          Dashboard de monitoramento web<br>
+          Documentação técnica executável<br>
+          Infraestrutura de nuvem inclusa*
+        </div>
+      </div>
+      <div style="border-top:0.5px solid #A0916F;padding-top:14px;margin-top:14px;">
+        <div style="font-size:10px;color:#7A6A4F;letter-spacing:1px;margin-bottom:10px;">FORMA DE PAGAMENTO</div>
+        <div style="display:flex;gap:8px;">
+          <div style="flex:1;background:#2E2720;padding:12px;text-align:center;">
+            <div class="brand" style="font-size:clamp(20px,2.5vw,28px);color:#E8DFC8;">50%</div>
+            <div style="font-size:10px;color:#A0916F;letter-spacing:1px;margin-top:4px;">NA ASSINATURA</div>
+            <div style="font-size:11px;color:#7A6A4F;margin-top:4px;">R$ 27.000</div>
+          </div>
+          <div style="flex:1;background:#A0916F;padding:12px;text-align:center;">
+            <div class="brand" style="font-size:clamp(20px,2.5vw,28px);color:#1C1712;">50%</div>
+            <div style="font-size:10px;color:#1C1712;letter-spacing:1px;margin-top:4px;">NA ENTREGA</div>
+            <div style="font-size:11px;color:#1C1712;margin-top:4px;">R$ 27.000</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px;">
+      <div class="lbl" style="color:#A0916F;">SUSTENTAÇÃO MENSAL</div>
+      <table>
+        <tr>
+          <th></th>
+          <th style="text-align:center;">Tier 1</th>
+          <th style="text-align:center;">Tier 2</th>
+          <th style="text-align:center;">Tier 3</th>
+        </tr>
+        <tr>
+          <td style="color:#7A6A4F;font-size:11px;">Volume/mês</td>
+          <td style="text-align:center;font-size:11px;">até 2.000</td>
+          <td style="text-align:center;font-size:11px;">até 5.000</td>
+          <td style="text-align:center;font-size:11px;">10.000+</td>
+        </tr>
+        <tr>
+          <td style="color:#7A6A4F;font-size:11px;">Alterações/mês</td>
+          <td style="text-align:center;font-size:11px;">4</td>
+          <td style="text-align:center;font-size:11px;">8</td>
+          <td style="text-align:center;font-size:11px;">ilimitado</td>
+        </tr>
+        <tr>
+          <td style="color:#7A6A4F;font-size:11px;">Infra nuvem*</td>
+          <td style="text-align:center;font-size:11px;">R$ 1.125</td>
+          <td style="text-align:center;font-size:11px;">R$ 2.188</td>
+          <td style="text-align:center;font-size:11px;">R$ 4.125</td>
+        </tr>
+        <tr style="background:#1C1712;">
+          <td style="color:#A0916F;font-weight:500;font-size:12px;">Valor mensal</td>
+          <td style="text-align:center;color:#E8DFC8;font-weight:500;font-size:12px;">R$ 15.500</td>
+          <td style="text-align:center;color:#E8DFC8;font-weight:500;font-size:12px;">R$ 22.000</td>
+          <td style="text-align:center;color:#E8DFC8;font-weight:500;font-size:12px;">R$ 35.000</td>
+        </tr>
+      </table>
+      <div style="font-size:10px;color:#A0916F;line-height:1.7;">*Infra estimada — confirmada após definição da arquitetura técnica.</div>
+      <div style="font-size:10px;color:#7A6A4F;line-height:1.7;">Sustentação cobre as funcionalidades entregues. Melhorias e calibrações são contrato separado.</div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- S7 SLA -->
+<div class="wrapper">
+<p class="slide-num">SLIDE 7 — SLA E MONITORAMENTO</p>
+<div class="slide" style="background:#E8DFC8;display:flex;flex-direction:column;padding:5% 7%;">
+  <div class="lbl" style="color:#A0916F;margin-bottom:16px;">SLA DE ATENDIMENTO · MONITORAMENTO 24X7</div>
+  <div style="display:grid;grid-template-columns:3fr 2fr;gap:18px;flex:1;">
+    <div style="display:flex;flex-direction:column;gap:10px;">
+      <table>
+        <tr>
+          <th>Severidade</th>
+          <th>Situação</th>
+          <th>Resposta</th>
+          <th>Resolução</th>
+        </tr>
+        <tr>
+          <td><span style="color:#C0392B;font-size:14px;">●</span> Alto</td>
+          <td>Robô parado</td>
+          <td>2h — 24x7</td>
+          <td>4h úteis / 8h fds e feriados</td>
+        </tr>
+        <tr>
+          <td><span style="color:#E67E22;font-size:14px;">●</span> Médio</td>
+          <td>Erro parcial &gt;20%</td>
+          <td>4h — 24x7</td>
+          <td>Mesmo dia útil</td>
+        </tr>
+        <tr>
+          <td><span style="color:#F1C40F;font-size:14px;">●</span> Baixo</td>
+          <td>Bug pontual &lt;5%</td>
+          <td>1º horário comercial</td>
+          <td>24h úteis</td>
+        </tr>
+      </table>
+      <div style="background:#1C1712;padding:12px 14px;margin-top:4px;">
+        <div style="font-size:10px;color:#7A6A4F;letter-spacing:1px;margin-bottom:5px;">IMPORTANTE</div>
+        <div style="font-size:12px;color:#A0916F;line-height:1.7;">Melhorias, ajustes de calibração e novas funcionalidades não estão cobertas pela sustentação e serão tratadas em contrato separado.</div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:8px;">
+      <div style="background:#1C1712;padding:16px;flex:1;display:flex;flex-direction:column;gap:10px;">
+        <div class="lbl" style="color:#7A6A4F;margin-bottom:4px;">MONITORAMENTO</div>
+        <div style="display:flex;gap:10px;align-items:flex-start;"><div style="color:#A0916F;font-size:12px;flex-shrink:0;">→</div><div style="font-size:12px;color:#E8DFC8;line-height:1.6;">Monitoramento 24x7 com alertas automáticos</div></div>
+        <div style="display:flex;gap:10px;align-items:flex-start;"><div style="color:#A0916F;font-size:12px;flex-shrink:0;">→</div><div style="font-size:12px;color:#E8DFC8;line-height:1.6;">Dashboard web incluso — sem licença extra</div></div>
+        <div style="display:flex;gap:10px;align-items:flex-start;"><div style="color:#A0916F;font-size:12px;flex-shrink:0;">→</div><div style="font-size:12px;color:#E8DFC8;line-height:1.6;">Logs JSON + screenshots por processo</div></div>
+        <div style="display:flex;gap:10px;align-items:flex-start;"><div style="color:#A0916F;font-size:12px;flex-shrink:0;">→</div><div style="font-size:12px;color:#E8DFC8;line-height:1.6;">Notificação automática via Teams/e-mail</div></div>
+        <div style="display:flex;gap:10px;align-items:flex-start;"><div style="color:#A0916F;font-size:12px;flex-shrink:0;">→</div><div style="font-size:12px;color:#E8DFC8;line-height:1.6;">Primeiro atendimento sempre pela MJTB Labs</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- S8 RISCOS -->
+<div class="wrapper">
+<p class="slide-num">SLIDE 8 — RISCOS E PONTOS DE ATENÇÃO</p>
+<div class="slide" style="background:#1C1712;display:flex;flex-direction:column;padding:6% 8%;">
+  <div class="lbl" style="color:#7A6A4F;margin-bottom:22px;">TRANSPARÊNCIA — PONTOS DE ATENÇÃO FORMAIS</div>
+  <div style="display:flex;flex-direction:column;gap:14px;flex:1;">
+    <div style="border-left:2px solid #A0916F;padding-left:16px;">
+      <div class="lbl" style="color:#A0916F;font-size:10px;margin-bottom:6px;">01 · FORMULÁRIOS DO e-CAC NÃO DOCUMENTADOS</div>
+      <div style="font-size:13px;color:#E8DFC8;line-height:1.7;">O PDD apresenta descrição genérica das telas do e-CAC. Variações não mapeadas podem gerar esforço adicional de desenvolvimento. Será tratado e comunicado na fase inicial do projeto.</div>
+    </div>
+    <div style="border-left:2px solid #7A6A4F;padding-left:16px;">
+      <div class="lbl" style="color:#A0916F;font-size:10px;margin-bottom:6px;">02 · SESSÃO SERPRO E NAVEGAÇÃO PRIVADA</div>
+      <div style="font-size:13px;color:#E8DFC8;line-height:1.7;">O robô usa Selenium em modo privado, sem vínculo com sessões abertas no browser. A necessidade do SERPRO pré-aberto precisa ser reavaliada tecnicamente — será endereçado na fase de arquitetura.</div>
+    </div>
+    <div style="border-left:2px solid #5A4E3A;padding-left:16px;">
+      <div class="lbl" style="color:#A0916F;font-size:10px;margin-bottom:6px;">03 · MANUTENÇÃO RECORRENTE ESTRUTURAL</div>
+      <div style="font-size:13px;color:#E8DFC8;line-height:1.7;">Web scraping é sensível a qualquer alteração no frontend do portal e-CAC. Recalibrações por mudanças no portal <span style="color:#A0916F;">não estão cobertas pela sustentação</span> e serão tratadas como novo escopo contratual.</div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- S9 ENCERRAMENTO -->
+<div class="wrapper">
+<p class="slide-num">SLIDE 9 — ENCERRAMENTO</p>
+<div class="slide" style="background:#E8DFC8;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:8%;">
+  <div class="lbl" style="color:#A0916F;margin-bottom:20px;">PRÓXIMOS PASSOS</div>
+  <div class="brand" style="font-size:clamp(20px,3.5vw,42px);color:#1C1712;line-height:1.2;margin-bottom:20px;">Prontos para transformar<br>a operação da ASA Comex.</div>
+  <div style="width:44px;height:0.5px;background:#A0916F;margin-bottom:20px;"></div>
+  <div style="font-size:13px;color:#7A6A4F;line-height:2.6;margin-bottom:28px;">
+    Aprovação da proposta → Assinatura do contrato → Kickoff técnico → Início semana 1<br>
+    mi.mirandas@gmail.com · (21) 98385-0916<br>
+    CNPJ 66.142.488/0001-08
+  </div>
+  <div style="display:flex;gap:24px;align-items:baseline;">
+    <div class="brand" style="font-size:22px;color:#1C1712;letter-spacing:5px;">MJTB</div>
+    <div style="font-size:10px;color:#A0916F;letter-spacing:5px;">LABS</div>
+  </div>
+  <div class="brand" style="font-size:13px;color:#A0916F;letter-spacing:3px;margin-top:8px;">do dado à decisão.</div>
+</div>
+</div>
+
+<div class="btns">
+  <button class="btn" onclick="go(-1)">← anterior</button>
+  <button class="btn" onclick="go(1)">próximo →</button>
+</div>
+
+<script>
+var cur=0,tot=9;
+var nav=document.getElementById('nav');
+for(var i=0;i<tot;i++){
+  var d=document.createElement('button');
+  d.className='dot'+(i===0?' on':'');
+  d.dataset.i=i;
+  d.onclick=function(){goTo(+this.dataset.i);};
+  nav.appendChild(d);
+}
+function goTo(n){
+  document.querySelectorAll('.wrapper')[cur].classList.remove('active');
+  document.querySelectorAll('.dot')[cur].classList.remove('on');
+  cur=(n+tot)%tot;
+  document.querySelectorAll('.wrapper')[cur].classList.add('active');
+  document.querySelectorAll('.dot')[cur].classList.add('on');
+}
+function go(d){goTo(cur+d);}
+</script>
+</body>
+</html>
